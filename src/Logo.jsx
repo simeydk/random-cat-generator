@@ -1,7 +1,13 @@
 import React from "react";
 
+const Logo2 = () => (
+  <header className="logo">
+    <h1 className="logo-text">Random 🐱 Generator</h1>  
+  </header>
+)
+
 const Logo = () => (
-  <div style={{ position: "absolute", top: "30px", left: "50px" }}>
+  <header className="logo">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="300"
@@ -37,7 +43,7 @@ const Logo = () => (
         </text>
       </g>
     </svg>
-  </div>
+  </header>
 );
 
-export default Logo;
+export default Logo2;
