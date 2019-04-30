@@ -20,11 +20,11 @@ body {
 }
 
 .logo { 
-  height:0px;
+  /* height:0px; */
   color: #FF877C;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   padding-left: 20px;
-  /* transform: skewY(-11deg) translateY(20px); */
+  transform: skewY(-4deg) translateY(10px);
 }
 
 .logo-text {
@@ -38,3 +38,7 @@ body {
   color: #FF877C;
   font-family: monospace;
 }
+
+.footer a {
+  color:inherit;
+} 
