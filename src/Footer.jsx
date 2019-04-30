@@ -1,13 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => <footer className="footer">
-    <span >
-        made using <a href="//thecatapi.com/" target="_blank">thecatapi.com</a>
-    </span>
-    <pre style={{display:"inline"}}>{"  //  "}</pre>
-    <span >
-        view source on <a href="//github.com/simeydk/randomcatgenerator">github</a>
-    </span>
-</footer>
+const A = ({ children, ...props }) => (
+  <a target="_blank" rel="noopener noreferrer" {...props}>
+    {children}
+  </a>
+);
 
-export default Footer
+const Footer = () => (
+  <footer className="footer">
+    <span>
+      made using <A href="https://thecatapi.com/">thecatapi.com</A>
+    </span>
+    <pre style={{ display: "inline" }}>{"  //  "}</pre>
+    <span>
+      view source on{" "}
+      <A href="https://github.com/simeydk/random-cat-generator">github</A>
+    </span>
+  </footer>
+);
+
+export default Footer;
