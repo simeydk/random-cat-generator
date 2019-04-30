@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import CatPicture from "./CatPicture";
+import CatPic from "./CatPic";
 import Logo from "./Logo";
 import Footer from "./Footer"
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Logo style={{ position: "aboslute" }} />
-      <CatPicture />
+      <CatPic />
       <Footer />
     </div>
   );

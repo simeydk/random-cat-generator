@@ -1,49 +1,8 @@
 import React from "react";
 
-const Logo2 = () => (
-  <header className="logo">
-    <h1 className="logo-text">Random 🐱 Generator</h1>  
-  </header>
-)
-
 const Logo = () => (
   <header className="logo">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="300"
-      height="62"
-      viewBox="0 0 622 62"
-    >
-      <g
-        fill="none"
-        fill-rule="evenodd"
-        font-size="60"
-        transform="translate(-9 -11)"
-      >
-        <text fill="#FF877C" font-family="AndaleMono, Andale Mono">
-          <tspan x="0" y="54">
-            random{" "}
-          </tspan>{" "}
-          <tspan
-            x="252.041"
-            y="54"
-            font-family="AppleColorEmoji, Apple Color Emoji"
-          >
-            {" "}
-          </tspan>{" "}
-          <tspan x="312.041" y="54">
-            generator
-          </tspan>
-        </text>
-        <text fill="#4A4A4A" font-family="AppleColorEmoji, Apple Color Emoji">
-          {/* eslint-disable-next-line */}
-          <tspan x="233" y="67" aria-label="Cat" role="img">
-            🐱
-          </tspan>
-        </text>
-      </g>
-    </svg>
+    <h1 className="logo-text">Random <span role="img" aria-label="cat emoji">🐱</span> Generator</h1>  
   </header>
-);
-
-export default Logo2;
+)
+export default Logo;

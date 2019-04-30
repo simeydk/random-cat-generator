@@ -24,7 +24,7 @@ body {
   color: #FF877C;
   align-self: flex-start;
   padding-left: 20px;
-  transform: skewY(-11deg) translateY(20px);
+  /* transform: skewY(-11deg) translateY(20px); */
 }
 
 .logo-text {
@@ -36,5 +36,5 @@ body {
   justify-self: flex-end;
   padding: 1rem;
   color: #FF877C;
-  font-family: 
+  font-family: monospace;
 }
