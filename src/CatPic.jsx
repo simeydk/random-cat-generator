@@ -16,15 +16,14 @@ const CatPic = () => {
   // get a cat on mount (like ComponentDidMount)
   useEffect(getNewCat, []);
 
-  return (
+    return (
     <div id="catContainer">
       <LoaderImg
         src={url}
         LoadingComponent={<Spinner />}
         className="catImage catImage--visible"
       />
-      <button className="newCatButton" onClick={getNewCat}>
-        {" "}
+      <button autoFocus className="newCatButton" onClick={getNewCat}>
         New Cat
       </button>
     </div>
