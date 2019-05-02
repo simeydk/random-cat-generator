@@ -1,6 +1,7 @@
 .catImage {
   opacity: 0;
   transition: opacity 0.1s linear;
+  width:100%;
   max-width: 450px;
   max-height: 300px;
 }
@@ -10,8 +11,11 @@
 }
 
 #catContainer {
-  width: 600px;
-  height: 450px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 320px;
+  max-width: 640px;
+  max-height: 480px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@
   position: relative;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 30px;
 }
 
 .newCatButton {
