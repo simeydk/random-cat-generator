@@ -10,7 +10,7 @@ const cacheImage = (src) => {
   const img = new Image()
   img.src = src
   imageCache.push(img)
-} 
+}
 
  const cacheCat = async (n = 1) => {
   for (let i = 0; i < n; i++) {
@@ -25,7 +25,7 @@ const CatPic = () => {
 
   const getNewCat = async () => {
     cacheCat()
-    const url = imageCache.shift().src || await getCatUrl();
+    const url = imageCache.length > 0 ? imageCache.shift().src : await getCatUrl();
     // const url = await getCatUrl();
     setUrl(url);
   };
