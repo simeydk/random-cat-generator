@@ -14,7 +14,7 @@ const Footer = () => (
     <pre style={{ display: "inline" }}>{"  //  "}</pre>
     <span>
       view source on{" "}
-      <A href="https://github.com/simeydk/random-cat-generator">github</A>
+      <A href="https://github.com/simeydk/random-cat-generator/tree/simeydk">github</A>
     </span>
   </footer>
 );
