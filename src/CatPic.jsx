@@ -4,36 +4,38 @@ import LoaderImg from "./LoaderImg";
 import Spinner from "./Spinner";
 import "./cats.css";
 
-const imageCache = []
+const imageCache = [];
 
-const cacheImage = (src) => {
-  const img = new Image()
-  img.src = src
-  imageCache.push(img)
-}
+const cacheImage = src => {
+  const img = new Image();
+  img.src = src;
+  imageCache.push(src);
+};
 
- const cacheCat = async (n = 1) => {
+const cacheCat = async (n = 1) => {
   for (let i = 0; i < n; i++) {
-    cacheImage(await getCatUrl())
+    cacheImage(await getCatUrl());
   }
-}
+};
 
-cacheCat(5)
+// cacheCat(5);
 
 const CatPic = () => {
   const [url, setUrl] = useState(null);
 
   const getNewCat = async () => {
-    cacheCat()
-    const url = imageCache.length > 0 ? imageCache.shift().src : await getCatUrl();
-    // const url = await getCatUrl();
+    const url = imageCache.length > 0 ? imageCache.shift() : await getCatUrl(); // get a cached image
     setUrl(url);
+    cacheCat(); // que a new cat to be cached
   };
 
   // get a cat on mount (like ComponentDidMount)
-  useEffect(getNewCat, []);
+  useEffect(() => {
+    getNewCat();
+    cacheCat(5);
+  }, []);
 
-    return (
+  return (
     <div id="catContainer">
       <LoaderImg
         src={url}
