@@ -23,7 +23,7 @@ class CatPicture extends Component {
     (async () => {
       const catPic = await getCatPhoto();
       this.setState({
-        catImage: catPic[0].url
+        catImage: catPic
       });
       setTimeout(() => {
         this.setState({ loading: false });

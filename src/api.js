@@ -1,16 +1,10 @@
 export async function getCatPhoto() {
-  const API_KEY = process.env.REACT_APP_API_KEY;
-
   try {
-    let response = await fetch(
-      "https://api.thecatapi.com/v1/images/search?size=short",
-      {
-        headers: {
-          x_api_key: API_KEY
-        }
-      }
-    );
-    return await response.json();
+    const apiUrl = "https://api.thecatapi.com/v1/images/search?size=short";
+    const response = await fetch(apiUrl);
+    const json = await response.json();
+    const catUrl = json[0].url;
+    return catUrl;
   } catch (e) {
     console.log("Error!", e);
   }
