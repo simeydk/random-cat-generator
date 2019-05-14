@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getCatUrl } from "./api";
+import { getCatUrl } from "./getCatUrl";
 import LoaderImg from "./LoaderImg";
 import Spinner from "./Spinner";
 import "./cats.css";
@@ -17,8 +17,6 @@ const cacheCat = async (n = 1) => {
     cacheImage(await getCatUrl());
   }
 };
-
-// cacheCat(5);
 
 const CatPic = () => {
   const [url, setUrl] = useState(null);
