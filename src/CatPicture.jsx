@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getCatPhoto } from "./api";
 import useRefresh from './useRefresh'
 import Spinner from "./Spinner";
+import LoaderImg from "./LoaderImg"
 
 import "./cats.css";
 
@@ -22,13 +23,13 @@ function CatPicture() {
   return (
     <React.Fragment>
       <div id="catContainer">
-        <img
+        <LoaderImg
           src={catImage}
           onLoad={handleOnLoad}
           alt="Cat"
           className={"catImage" + (!loading ? " catImage--visible" : "")}
+          loadingComponent={<Spinner/>}
         />
-        {loading && <Spinner />}
         <button className="newCatButton" onClick={getCatPicture}>
           New cat
         </button>
