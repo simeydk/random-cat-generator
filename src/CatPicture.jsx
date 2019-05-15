@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { getCatPhoto } from "./api";
-
+import useRefresh from './useRefresh'
 import Spinner from "./Spinner";
 
 import "./cats.css";
 
 function CatPicture() {
+  const getCatUrl = async () => (await getCatPhoto())[0].url 
+  const [catImage, refreshCatImage] = useRefresh(getCatUrl)
   const [loading, setLoading] = useState(true)
-  const [catImage, setCatImage] = useState(null)
 
   async function getCatPicture() {
     setLoading(true);
-    const catPic = await getCatPhoto();
-    setCatImage(catPic[0].url);
+    refreshCatImage();
   };
 
   function handleOnLoad() {
     setLoading(false)
   }
 
-  useEffect(getCatPicture,[])
-  
   return (
     <React.Fragment>
       <div id="catContainer">
