@@ -1,0 +1,9 @@
+{
+    // "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+        // "editor.background": "#ff0000",
+        // "statusBar.background": "#BADA55",
+        // "titleBar.activeBackground": "#ff8e81",
+        "activityBar.background": "#ff8e81",
+    }
+}
